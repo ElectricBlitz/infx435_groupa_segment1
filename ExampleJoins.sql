@@ -15,9 +15,20 @@ FROM EMPLOYEE JOIN
 WHERE EMPLOYEE.EMPLOYEENO = 7;
 
 --shows a customer's loans
-
 SELECT FirstName, LastName, Customer.SSN, LoanNo
 FROM Customer JOIN
     Loan ON
     Customer.SSN = Loan.SSN
 WHERE Customer.SSN = 362603268;
+
+-- shows a Loan Officer's loans
+SELECT FirstName, LastName, EmployeeNo, LoanNo
+FROM Employee JOIN
+    Loan ON
+    Loan.LoanOfficer = EmployeeNo;
+
+-- shows a Loan Underwriter's loans
+SELECT FirstName, LastName, EmployeeNo, LoanNo
+FROM Employee JOIN
+    Loan ON
+    Loan.loanUnderwriter = EmployeeNo;
