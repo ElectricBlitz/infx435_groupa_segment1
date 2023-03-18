@@ -1,10 +1,4 @@
--- this join is used for information on a loan and its customer
-SELECT LoanNo, LoanTerm, AppDate, LoanAmt, MonthlyPayment, LoanOfficer, loanUnderwriter, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME
-FROM LOAN
-JOIN CUSTOMER using (SSN)
-ORDER BY LoanNo;
-
---works
+--Gives some information about a billing statement
 SELECT BILLINGSTMTNO, DueDate, LoanOfficer, FirstName
 FROM BillingStmt JOIN
     Loan
@@ -12,3 +6,18 @@ FROM BillingStmt JOIN
     JOIN Customer
     ON Customer.SSN = Loan.SSN AND Customer.SSN = BillingStmt.SSN
 WHERE BillingStmt.BILLINGSTMTNO = 1;
+
+-- shows you an employee's position name
+SELECT EmployeeNo, Employee.JobTitleNo, PositionName, FirstName, LastName
+FROM EMPLOYEE JOIN
+    JOBTITLE ON
+    EMPLOYEE.JOBTITLENO = JOBTITLE.JOBTITLENO
+WHERE EMPLOYEE.EMPLOYEENO = 7;
+
+--shows a customer's loans
+
+SELECT FirstName, LastName, Customer.SSN, LoanNo
+FROM Customer JOIN
+    Loan ON
+    Customer.SSN = Loan.SSN
+WHERE Customer.SSN = 362603268;
