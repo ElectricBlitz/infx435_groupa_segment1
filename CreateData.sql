@@ -52,10 +52,17 @@ INSERT INTO Loan(Loan.LoanTerm, Loan.LoanAmt, Loan.InterestPercent, Loan.Monthly
 VALUES(48, 12831, 4.69, 265, 1100, 48, 2, '578820209', '2', '53799226', 8, '815047562');
 INSERT INTO Loan(Loan.LoanTerm, Loan.LoanAmt, Loan.InterestPercent, Loan.MonthlyPayment, Loan.PrincipleBalance, Loan.RemainingPayments, Loan.LoanOfficer, Loan.SSN, Loan.LoanTypeID, Loan.bankAcctNo, Loan.loanUnderwriter, Loan.bankRouteNo)
 VALUES(72, 21939, 7.39, 490, 1000, 72, 3, '159849185', '3', '34325538', 9, '991085846');
+INSERT INTO Loan(Loan.LoanTerm, Loan.LoanAmt, Loan.InterestPercent, Loan.MonthlyPayment, Loan.PrincipleBalance, Loan.RemainingPayments, Loan.LoanOfficer, Loan.SSN, Loan.LoanTypeID, Loan.bankAcctNo, Loan.loanUnderwriter, Loan.bankRouteNo)
+VALUES(60, 30100, 5.29, 680, 1150, 60, 4, '400491877', '3', '88649807', 10, '490357334');
+INSERT INTO Loan(Loan.LoanTerm, Loan.LoanAmt, Loan.InterestPercent, Loan.MonthlyPayment, Loan.PrincipleBalance, Loan.RemainingPayments, Loan.LoanOfficer, Loan.SSN, Loan.LoanTypeID, Loan.bankAcctNo, Loan.loanUnderwriter, Loan.bankRouteNo)
+VALUES(48, 25423, 3.69, 420, 1175, 48, 5, '362603268', '3', '15759445', 10, '207534395');
 
 INSERT INTO BillingStmt(FinalPmtDate, LoanNo, SSN)
 with p AS (
     SELECT '11-Mar-2026', 1, '525952841' FROM dual UNION ALL
+    SELECT '18-Mar-2029', 3, '159849185' FROM dual UNION ALL
+    SELECT '18-Mar-2028', 4, '400491877' FROM dual UNION ALL
+    SELECT '18-Mar-2027', 5, '362603268' FROM dual UNION ALL
     SELECT '11-Mar-2027', 2, '578820209' FROM dual
 )
 
