@@ -32,3 +32,9 @@ SELECT FirstName, LastName, EmployeeNo, LoanNo
 FROM Employee JOIN
     Loan ON
     Loan.loanUnderwriter = EmployeeNo;
+
+--this will alter a customer's info in the customer table
+
+UPDATE Customer
+SET FirstName = Jacob, LastName = Guidry
+WHERE SSN = 362603268;
